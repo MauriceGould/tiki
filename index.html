@@ -4,19 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Explore Tiki history, tropical cocktail recipes, and rum products.">
-  <title>Tiki Culture | Responsive Layout Review</title>
+  <title>MO'S MOJO | Tiki History, Cocktails & Rum</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Seaweed+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
     <div class="wrapper site-nav">
-      <a class="site-logo" href="#top">MO'S MOJO</a>
+      <a class="site-logo" href="#main-content">MO'S MOJO</a>
       <nav aria-label="Main navigation">
         <ul class="site-nav__list">
-          <li><a class="site-nav__link" aria-current="page" href="#top">Home</a></li>
+          <li><a class="site-nav__link" aria-current="page" href="#main-content">Home</a></li>
           <li><a class="site-nav__link" href="#history">History</a></li>
           <li><a class="site-nav__link" href="#cocktails">Cocktails</a></li>
           <li><a class="site-nav__link" href="#products">Products</a></li>
@@ -26,7 +27,7 @@
     </div>
   </header>
 
-  <main id="top">
+  <main id="main-content">
     <section class="hero section">
       <div class="hero-pattern" aria-hidden="true"></div>
       <div class="wrapper hero__inner">
@@ -93,7 +94,7 @@ Today, Tiki culture has experienced a major revival. Modern Tiki bars celebrate 
                 <p class="eyebrow">Maitai</p>
                 <h3>Mai Tai</h3>
                 <p>A rum cocktail with citrus, almond, and tropical flavors.</p>
-                <a class="button" href="mai-tai.html">View Recipe</a>
+                <a class="button" href="mai-tai.html">View Mai Tai Recipe</a>
               </div>
             </article>
           </div>
@@ -106,7 +107,7 @@ Today, Tiki culture has experienced a major revival. Modern Tiki bars celebrate 
                 <p class="eyebrow">Tucan Sam</p>
                 <h3>Jungle Bird</h3>
                 <p>A tropical drink that combines rum, pineapple, citrus, and bitter flavors.</p>
-                <a class="button" href="jungle-bird.html">View Recipe</a>
+                <a class="button" href="jungle-bird.html">View Jungle Bird Recipe</a>
               </div>
             </article>
           </div>
@@ -119,7 +120,7 @@ Today, Tiki culture has experienced a major revival. Modern Tiki bars celebrate 
                 <p class="eyebrow">Soggy Dollar Rum Cocktail</p>
                 <h3>Painkiller</h3>
                 <p>A rich tropical drink featuring rum, pineapple, orange, and coconut.</p>
-                <a class="button" href="painkiller.html">View Recipe</a>
+                <a class="button" href="painkiller.html">View Painkiller Recipe</a>
               </div>
             </article>
           </div>
@@ -131,7 +132,7 @@ Today, Tiki culture has experienced a major revival. Modern Tiki bars celebrate 
                 <p class="eyebrow">The Living Dead Maker</p>
                 <h3>Zombie</h3>
                 <p>A bold rum cocktail served with citrus and tropical garnishes.</p>
-                <a class="button" href="zombie.html">View Recipe</a>
+                <a class="button" href="zombie.html">View Zombie Recipe</a>
               </div>
             </article>
           </div>
@@ -186,19 +187,20 @@ Today, Tiki culture has experienced a major revival. Modern Tiki bars celebrate 
         </div>
 
         <form class="form" action="https://formspree.io/f/xaeejzoq" method="POST">
+          <p class="form-instructions" id="form-instructions">All fields are required.</p>
           <div class="form-grid">
             <div class="form-field">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" autocomplete="name" required>
+              <input id="name" name="name" type="text" autocomplete="name" aria-describedby="form-instructions" required>
             </div>
             <div class="form-field">
               <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required>
+              <input id="email" name="email" type="email" autocomplete="email" aria-describedby="form-instructions" required>
             </div>
           </div>
           <div class="form-field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="5" aria-describedby="form-instructions" required></textarea>
           </div>
           <button class="button" type="submit">Send Message</button>
         </form>
