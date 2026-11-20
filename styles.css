@@ -283,3 +283,110 @@
     .recipe-meta div + div { border-inline-start: 0; border-block-start: 1px solid var(--color-border); }
   }
 }
+
+
+/* Theme control */
+@layer components {
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.75rem;
+    border: 2px solid var(--color-gold);
+    border-radius: 999px;
+    background: transparent;
+    color: #fff8e8;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .theme-toggle:hover {
+    background: rgb(255 255 255 / 0.08);
+  }
+
+  .theme-toggle__icon {
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+}
+
+/* Dark theme */
+@layer overrides {
+  html[data-theme="dark"] {
+    --color-bg: #081c18;
+    --color-surface: #102a23;
+    --color-ink: #fff6dd;
+    --color-text: #f2ead8;
+    --color-muted: #d1c5ae;
+    --color-primary: #78aa8b;
+    --color-primary-deep: #061612;
+    --color-leaf: #8eb27c;
+    --color-accent: #f28b4b;
+    --color-gold: #e4b85c;
+    --color-border: #826f4c;
+    --color-error: #ff8c8c;
+  }
+
+  html[data-theme="dark"] body {
+    background-color: var(--color-bg);
+    background-image: radial-gradient(rgb(242 226 189 / 0.05) 1px, transparent 1px);
+  }
+
+  html[data-theme="dark"] .section--history,
+  html[data-theme="dark"] .recipe-hero {
+    background: linear-gradient(135deg, #18382f, #102820);
+  }
+
+  html[data-theme="dark"] .section--products {
+    background: #102a23;
+  }
+
+  html[data-theme="dark"] .product-card,
+  html[data-theme="dark"] .card,
+  html[data-theme="dark"] .recipe-panel {
+    background: #17362d;
+    color: var(--color-text);
+  }
+
+  html[data-theme="dark"] .card p {
+    color: #eee5d1;
+  }
+
+  html[data-theme="dark"] .card h3,
+  html[data-theme="dark"] .recipe-title,
+  html[data-theme="dark"] .recipe-meta dd,
+  html[data-theme="dark"] .recipe-panel h2 {
+    color: #fff6dd;
+  }
+
+  html[data-theme="dark"] .recipe-note {
+    background: #213e34;
+  }
+
+  html[data-theme="dark"] .button--secondary {
+    color: #fff6dd;
+    border-color: var(--color-gold);
+  }
+
+  html[data-theme="dark"] .product-card__image {
+    background: #f5f0e4;
+  }
+
+  html[data-theme="dark"] .form {
+    background: #17362d;
+    color: var(--color-text);
+  }
+
+  html[data-theme="dark"] .form-instructions,
+  html[data-theme="dark"] .form-field label {
+    color: #fff6dd;
+  }
+
+  html[data-theme="dark"] .form-field input,
+  html[data-theme="dark"] .form-field textarea {
+    background: #0d241e;
+    color: #fff6dd;
+    border-color: #9d875e;
+  }
+}
+
